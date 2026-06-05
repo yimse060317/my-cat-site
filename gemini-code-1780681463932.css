@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+/* ==========================================
+   1. 변수 설정 & 기본 리셋
+   ========================================== */
+:root {
+    --primary-color: #ff9f43;       /* 포인트 오렌지 */
+    --primary-light: #fff0e2;       /* 연한 배경용 오렌지 */
+    --accent-color: #ff7675;        /* 태그용 핑크 */
+    --bg-color: #f9f9fb;            /* 메인 배경색 */
+    --card-bg: #ffffff;             /* 카드 및 헤더 배경색 */
+    --text-main: #2d3436;           /* 메인 글자색 */
+    --text-sub: #636e72;            /* 서브 글자색 */
+    --border-color: #f1f2f6;        /* 경계선 색상 */
+    
+    --font-main: 'Noto Sans KR', sans-serif;
+    --font-eng: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* 네비게이션 클릭 시 부드러운 스크롤 */
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased; /* 글자 폰트 주변 깨짐 방지 */
+}
+
+/* ==========================================
+   2. 헤더 (Navigation)
+   ========================================== */
+header {
+    background-color: var(--card-bg);
+    padding: 1.2rem 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-family: var(--font-eng);
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-left: 2rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--primary-color);
+}
+
+/* 하단 슬라이드 바 효과 */
+header nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+/* ==========================================
+   3. 히어로 섹션 (Main Banner)
+   ========================================== */
+.hero {
+    background: linear-gradient(135deg, #ffeaa7 0%, #ff9f43 100%);
+    color: white;
+    padding: 7rem 5%;
+    text-align: center;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0 10px 20px rgba(255, 159, 67, 0.15);
+}
+
+.hero h2 {
+    font-size: 2.6rem;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+/* ==========================================
+   4. 메인 콘텐츠 & 그리드
+   ========================================== */
+main {
+    max-width: 1140px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 2rem;
+    font-family: var(--font-eng);
+    font-weight: 700;
+    color: var(--text-main);
