@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우리 집 고양이를 소개합니다</title>
+    <style>
+        /* 전체 스타일 초기화 및 배경 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Malgun Gothic', sans-serif;
+            background-color: #fcf8f2;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 헤더 영역 */
+        header {
+            background-color: #ffe1b5;
+            text-align: center;
+            padding: 3rem 1rem;
+            border-bottom: 3px dashed #ffa14a;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            color: #d36100;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        /* 메인 컨텐츠 */
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* 프로필 섹션 (사진 + 기본정보) */
+        .profile-container {
+            display: flex;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            align-items: center;
+            gap: 2rem;
+        }
+        @media (max-width: 600px) {
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        .cat-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffe1b5;
+        }
+        .cat-info h2 {
+            font-size: 1.8rem;
+            color: #ffa14a;
+            margin-bottom: 0.5rem;
+        }
+        .info-list {
+            list-style: none;
+        }
+        .info-list li {
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+        .info-list strong {
+            color: #d36100;
+        }
+
+        /* 상세 소개 섹션 (매력 포인트, 일상) */
+        .details {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .details h3 {
+            font-size: 1.4rem;
+            color: #333;
+            border-left: 5px solid #ffa14a;
+            padding-left: 10px;
+            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+        }
+        .details h3:first-child {
+            margin-top: 0;
+        }
+        .details p {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+        .hobby-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+        .tag {
+            background-color: #f0e4d7;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* 푸터 */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🐾 Welcome to Cat's World</h1>
+        <p>세상에서 가장 사랑스러운 우리 집 고양이를 소개합니다!</p>
+    </header>
+
+    <main>
+        <section class="profile-container">
+            <img class="cat-photo" src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=500" alt="고양이 사진">
+            
+            <div class="cat-info">
+                <h2>나비 (Nabi)</h2>
+                <ul class="info-list">
+                    <li><strong>나이:</strong> 3살</li>
+                    <li><strong>성별:</strong> 공주님 ♀</li>
+                    <li><strong>종류:</strong> 코리안 숏헤어 (치즈탭)</li>
+                    <li><strong>성격:</strong> 호기심이 많고 아주 겁이 많은 성격</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="details">
+            <h3>✨ 매력 포인트</h3>
+            <p>
+                오동통한 솜방망이와 집사가 퇴근할 때마다 문 앞까지 마중 나오는 마중묘라는 점이 가장 큰 매력입니다. 
+                가끔 기분이 좋으면 골골송을 아주 크게 부르기도 해요.
+            </p>
+
+            <h3>💤 좋아하는 것들</h3>
+            <p>창밖 구경하기, 따뜻한 햇볕 아래서 낮잠 자기, 그리고 츄르라면 자다가도 벌떡 일어납니다.</p>
+            <div class="hobby-tags">
+                <span class="tag">#츄르사수</span>
+                <span class="tag">#햇볕냥</span>
+                <span class="tag">#사냥놀이</span>
+                <span class="tag">#골골송</span>
+            </div>
+
+            <h3>💌 집사의 한마디</h3>
+            <p>아프지 말고 지금처럼만 건강하고 행복하게 오래오래 같이 살자 내 새끼! ❤️</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 My Lovely Cat. Built with GitHub Pages</p>
+    </footer>
+
+</body>
+</html>
